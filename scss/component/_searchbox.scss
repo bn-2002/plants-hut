@@ -1,0 +1,62 @@
+.search-box {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 0fr 1fr;
+
+    @include respond(phone) { // width < 600?
+        grid-template-columns: 0fr .9fr;
+    }
+
+    &-input {
+        padding:1rem 3rem;
+        border-radius: 0rem .3rem .3rem 0rem;
+        border:none;
+        background-color: $color-white;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+
+
+        &:focus {
+            outline: none;
+        }
+
+        @media only screen and (max-width: 42.81em) { //685px
+            grid-column: 1/4;
+    };
+
+
+
+    }
+
+    &-icon {
+        text-align: center;
+        padding:1.1rem;
+        font-size: 2rem;
+        border-radius: .3rem 0rem 0rem .3rem;
+        background-color: $color-tertiary-light2;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include respond(tab-land) { // width < 1200?
+            padding:1.2rem;
+        }
+
+        @include respond(tab-port) { // width < 900?
+            padding:1.35rem;
+        }
+    
+        @media only screen and (max-width: 42.81em) { //685px
+            grid-column: 4/5;
+    };
+
+    @include respond(phone) { // width < 600?
+        padding:1.46rem;
+    }
+
+
+    
+    }
+}

@@ -1,0 +1,25 @@
+.blog-article {
+    padding:2rem;
+
+    &-title {
+        font-size:1.7rem;
+    }
+
+    &-img {
+        float: right;
+        width:20rem;
+        height:20rem;
+        margin-left:1rem;
+        border-radius: .5rem;
+    }
+
+    &-des {
+        text-align: justify;
+        display:inline;
+        font-size:1.4rem;
+    }
+
+    &-details {
+        font-size: 1.5rem;
+    }
+}

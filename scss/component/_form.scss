@@ -1,0 +1,108 @@
+form {
+    margin :1.5rem;
+    padding:1.6rem;
+    margin:10rem auto;
+    border-radius: .6rem;
+    width:35%;
+    font-size:1.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,1fr);
+    text-align: right;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    
+    @media only screen and (max-width: 62.475em) {   //1000px
+        width:40%;
+     }; 
+
+     @media only screen and (max-width: 49.98em) {   //800px
+        width:54%;
+        font-size: 1.4rem;
+     }; 
+
+     @media only screen and (max-width: 31.23em) {   //500px
+        width:85%;
+        font-size: 1.4rem;
+     }; 
+
+
+
+
+    h3 {
+        text-align: center;
+    }
+
+    input {
+        outline:none;
+        padding:.7rem;
+        border:none;
+        background-color: transparent;
+        // border-bottom: 2px $color-secondary solid;
+        margin-bottom: 0;
+
+    }
+
+    &>* {
+        display: block;
+        margin:.7rem;
+    }
+
+    p {
+        p {
+            text-align: center;
+        }
+
+        &:a {
+            color:$color-primary-light;
+            text-decoration: underline;      
+        }
+    }
+
+    [type="checkbox"] {
+       opacity: 0;
+       display: none;
+    }
+
+    [type="checkbox"]:checked + .checkmark{
+      background-size:0%;
+      background-color: $color-white;
+    }
+
+
+    .checkmark {
+        position: relative;
+        top:.3rem;
+        width:1.6rem;
+        height:1.6rem;;
+        border-radius: .4rem;
+        border:3px $color-primary-light solid;
+        display: inline-block;
+        padding:.2rem;
+        background: $color-primary-light
+         url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/1200px-White_check.svg.png) center/100% no-repeat;
+        transition : all ease;
+        }
+
+
+        .underline {
+            width:100%;
+            height:2px;
+            background-color: $color-secondary;
+            transform: scale(0, 1);
+          }
+
+          input:focus + .underline {
+           transform: scale(1);
+           transition: all 0.5s linear;
+           background-color: $color-secondary;
+          }
+
+          input {
+              border-bottom: 1px rgba(128, 128, 128, 0.336) solid;
+          }
+
+          input:focus {
+            border-bottom:none;
+        }
+
+
+}

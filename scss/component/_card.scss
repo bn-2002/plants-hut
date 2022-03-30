@@ -1,0 +1,72 @@
+.card {
+    perspective: 1000px;
+    &-inner {
+        position:relative;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+        background-color: $color-white;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        font-size: 1.4rem;
+        border-radius: 5px;  
+
+        &-front {
+            position: relative;
+            display: block;
+            text-align: center;
+            
+            .card-title {
+                border-radius: 1rem;
+                font-size: 1.5rem;    
+                background-color: $color-secondary-light;
+                text-align: right;
+                display: block;
+                text-align: center;
+                padding:.6rem;
+            }
+
+            .product-details {
+                background-color: $color-white;
+                grid-template-rows: repeat(4,auto);
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                margin:.5rem;
+                img {
+                  width:100%;
+                }
+            }
+
+        }
+
+        &-back {
+            text-align: center;
+            transform: rotateY(180deg);
+            display: grid;
+            grid-template-rows:2fr 2fr 1fr;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top:0;
+            height: 100%;
+            font-size: 2rem;
+        }
+
+        &-front,&-back {
+            backface-visibility:hidden;
+            width:100%;
+            padding:1rem;
+        }
+    }
+
+    &:hover .card-inner {
+        transform: rotateY(180deg);
+
+        @include respond(phone) { // width < 600?
+            transform: none;
+        }
+    }
+}
+

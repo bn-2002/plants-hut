@@ -1,0 +1,93 @@
+.slider {
+    direction: ltr;
+    margin:1rem auto;
+    .slides-container {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        
+        .arrow {
+            background-color:$color-primary-dark;
+            color:$color-white;
+            padding:.6rem;
+            border-radius: 46%;
+
+            &:hover {
+                cursor:pointer;
+            }
+
+            @include respond(phone) { // width < 600?
+                display:none;
+            }
+        
+       }
+       .container {
+           margin:0 auto;
+           padding:0 2rem;
+           display:flex;
+           justify-content: flex-start;
+           align-items: center;
+           flex-wrap: nowrap;
+           overflow-x: auto;
+           margin-left:.5rem;
+           margin-right:.5rem;
+           -webkit-overflow-scrolling: touch;
+
+           &::-webkit-scrollbar {
+               height:5px;
+               background-color: rgb(231, 216, 216);
+            }
+
+            &::-webkit-scrollbar-track {
+                box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;               height: 100% !important;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $color-secondary-light;
+            }
+
+
+           .slide {
+               min-width:24rem !important;
+               box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;               height: 100% !important;
+               margin:.5rem;
+               border-radius: .4rem;
+               padding:.5rem;
+               transition: all .3s;
+               transform: scale(.95);
+
+               &:hover {
+                   transform: scale(1);
+                   cursor: pointer;
+               }
+
+
+               img {
+                   width:100%;
+                   border-radius: .4rem;
+               }
+
+               .product-details {
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                grid-gap: .6rem;
+                }
+
+                a {
+                    background-color: $color-secondary;;
+                    border-radius: .5rem;
+                    padding:.5rem;
+                    font-size: 1.3rem;
+                    color:$color-white;
+                    transition: all .3s;
+
+                    &:hover {
+                        background-color: $color-secondary-dark;
+                    }
+                }
+           }
+       }
+    }
+}

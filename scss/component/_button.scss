@@ -1,0 +1,44 @@
+.product-order-btn {
+    padding:0rem 3rem;
+    display: inline-block;
+    width: 100%;
+    padding:1rem;
+    border-radius: 1rem;
+    font-size: 1.7rem;
+    color: $color-white-1;
+    background-color: $color-secondary-dark;
+}
+
+.order-tracking-btn {
+        text-align: center;
+        padding:1rem 5rem;
+        border-radius: 2rem;
+        border:1px rgba(128, 128, 128, 0.445) solid;
+        // background-color: $color-primary-light;     
+}
+
+.form-btn {
+    font-size: 1.4rem;
+    text-align: center;
+    padding:1rem 2rem;
+    border-radius: 2rem;
+    color: $color-white-1;
+    background-color: $color-primary-light;     
+}
+
+.add-to-cart-btn,.buyers-product-btn,.add-to-favorites-btn,.post-comment-btn {
+    background-color: $color-tertiary-light1;
+    border-radius: 1rem;
+    color:$color-white-1;
+    padding:1rem;
+    margin:1rem;
+    text-align: center;
+}
+
+
+a {
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+    }
+}

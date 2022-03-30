@@ -1,0 +1,38 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: IRANSansWeb;
+
+    &::selection {
+        color:$color-white-1;
+        background-color: $color-primary-dark;
+    }
+
+}
+
+body {
+    direction: rtl;
+    overflow-x: hidden;
+    background-color: rgb(245,246,248);
+}
+
+html {
+    //default size of webbrosers is 16px;
+    // This defines what 1rem is :
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(phone) { // width < 600?
+        font-size: 47%; //1 rem = 8px, 8/16 = 50%
+    }
+}
+
